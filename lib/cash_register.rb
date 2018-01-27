@@ -11,6 +11,8 @@ class CashRegister
   end
 
   def add_item(name, cost, quantity = 1)
+    @previous_items = @items
+    @previous_total = @total
     quantity.times { |_i| @items << name }
     @total += cost * quantity
   end
@@ -23,5 +25,8 @@ class CashRegister
       "There is no discount to apply."
     end
   end
+
+  def void_last_transaction
+    @items = @previous_items
 
 end
