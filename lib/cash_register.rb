@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister
   attr_reader :discount
   attr_accessor :total
