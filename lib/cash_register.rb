@@ -16,6 +16,7 @@ class CashRegister
   end
 
   def discount_math
+    binding.pry
     (100.0 - @discount.to_f) / 100.0
   end
 
