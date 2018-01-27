@@ -1,7 +1,7 @@
 class CashRegister
-  attr_reader :employee_discount
-  def initialize(employee_discount = nil)
+  attr_reader :discount
+  def initialize(discount = nil)
     @total = 0
-    @employee_discount = employee_discount
+    @discount = discount
   end
 end
