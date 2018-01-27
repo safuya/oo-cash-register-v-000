@@ -7,9 +7,11 @@ class CashRegister
   def initialize(discount = nil)
     @total = 0
     @discount = discount
+    @items = []
   end
 
   def add_item(name, cost, quantity = 1)
+    quantity.times { |_i| @items << name }
     @total += cost * quantity
   end
 
@@ -20,6 +22,9 @@ class CashRegister
     else
       "There is no discount to apply."
     end
+  end
+
+  def items(list)
   end
 
 end
