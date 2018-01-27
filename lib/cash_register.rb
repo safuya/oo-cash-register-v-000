@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def discount_math
-    (100 - @discount) / 100
+    (100.0 - @discount) / 100
   end
 
 end
